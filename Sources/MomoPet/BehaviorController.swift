@@ -171,7 +171,7 @@ final class BehaviorController {
             let toss = SCNAction.moveBy(x: dragVelocity.x * 0.15, y: dragVelocity.y * 0.15, z: 0, duration: 0.4)
             toss.timingMode = .easeOut
             pet.node.runAction(toss) { [weak self] in
-                self?.settleAfterToss()
+                DispatchQueue.main.async { self?.settleAfterToss() }
             }
             state = .idle
             pet.setMood(.curious)
