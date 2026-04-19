@@ -6,9 +6,7 @@ follows your cursor, and naps when you leave it alone.
 Built with Swift + AppKit + SceneKit. No model files — Momo is drawn from
 procedural primitives, so the whole app is a single small binary.
 
-<!-- Drop a GIF/screenshot of Momo in action here once you have one:
-![Momo demo](docs/momo.gif)
--->
+![Momo demo](docs/momo.png)
 
 ## Features
 
