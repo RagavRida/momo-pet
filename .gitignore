@@ -1,0 +1,25 @@
+## Swift / SPM
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+
+## Built app
+MomoPet.app/
+*.dmg
+*.zip
+
+## macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+## Editor
+.vscode/
+.idea/
+*.swp
