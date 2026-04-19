@@ -62,8 +62,8 @@ Quit from the menu bar — look for the small lavender dot.
 
 Momo is free and open source. If it makes you smile, you can say thanks:
 
-- **UPI (India):** <!-- paste your UPI ID or QR image link here -->
-- **Ko-fi:** <!-- https://ko-fi.com/your-username -->
+- **UPI (India):** ragavrida@okicici
+- **Ko-fi:** https://ko-fi.com/RagavRida
 - **GitHub Sponsors:** the "Sponsor" button at the top of this repo
 
 Funding goal: ₹8,500 to cover an Apple Developer account so everyone gets
