@@ -1,82 +1,107 @@
-# Momo — a tiny macOS desktop pet
+# 🐾 Momo — A Tiny macOS Desktop Pet
 
-Momo is a little creature that lives on your screen. It wanders, blinks,
-follows your cursor, and naps when you leave it alone.
+![macOS 12.0+](https://img.shields.io/badge/macOS-12.0%2B-lightgrey?style=for-the-badge&logo=apple)
+![Swift 5.0](https://img.shields.io/badge/Swift-5.0-F05138?style=for-the-badge&logo=swift)
+![License MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-Built with Swift + AppKit + SceneKit. No model files — Momo is drawn from
-procedural primitives, so the whole app is a single small binary.
+Momo is a little procedural creature that lives directly on your screen. It is designed to be lightweight, unobtrusive, and fun. Momo wanders around your desktop, blinks, follows your cursor, and even takes a nap when you leave it alone. 
 
-![Momo demo](docs/momo.png)
+Built natively with **Swift**, **AppKit**, and **SceneKit**. 
 
-## Features
+Instead of relying on heavy 3D `.usdz` or `.scn` models, Momo is drawn dynamically from procedural primitives, ensuring the entire app remains a single, incredibly small binary!
 
-- **Idle** — gentle breathing, occasional blinks
-- **Eye-tracking** — pupils follow your cursor
-- **Wander** — walks to a new spot on screen every ~30s
-- **Click react** — hop + squish + wide eyes
-- **Drag** — grab and toss; squishes on landing
-- **Sleep** — after 5 min of no interaction, sits down + closes eyes
-- **Wake** — cursor near = wakes up
-- **Speech bubble** — occasional thought
-- **Edge aware** — turns around at screen edges
+<div align="center">
+  <img src="docs/momo.png" alt="Momo Demo" width="600" />
+</div>
 
-## Install
+---
 
-### Option A — Run from source (recommended for now)
+## 📑 Table of Contents
 
-Requires Xcode command-line tools (`xcode-select --install`).
+- [🎮 Features & Interactions](#-features--interactions)
+- [⚙️ Tech Stack](#-tech-stack)
+- [🚀 Install & Quick Start](#-install--quick-start)
+- [💖 Support](#-support)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+
+---
+
+## 🎮 Features & Interactions
+
+Momo isn't just an idle application—it reacts to your workflow!
+
+- **Idle Behavior**: Gentle breathing and occasional blinking.
+- **Eye-Tracking**: Momo's pupils actively follow your cursor around the screen.
+- **Wander Mode**: Automatically walks to a random new spot on your screen every ~30 seconds.
+- **Click React**: Click on Momo to see it hop, squish, and widen its eyes in surprise.
+- **Physics Drag**: Grab, drag, and toss Momo across the screen—it squishes realistically upon landing.
+- **Sleep Cycle**: After 5 minutes of no cursor interaction, Momo will sit down and close its eyes.
+- **Wake Up**: Moving your cursor near a sleeping Momo instantly wakes it up.
+- **Speech Bubble**: Momo occasionally shares its thoughts with a tiny speech bubble.
+- **Edge Aware**: Seamlessly detects screen boundaries to turn around and avoid falling off-screen.
+
+---
+
+## ⚙️ Tech Stack
+
+- **Swift & AppKit**: Uses a transparent, borderless `NSWindow` that natively floats above all your other windows.
+- **SceneKit**: A complete 3D scene built exclusively from mathematical procedural primitives. No asset loading means an ultra-low memory footprint.
+
+---
+
+## 🚀 Install & Quick Start
+
+### Option A — Run from Source (Recommended)
+
+Running from source is the easiest way to try Momo right now. Ensure you have Xcode command-line tools installed (`xcode-select --install`).
 
 ```bash
 git clone https://github.com/RagavRida/momo-pet.git
 cd momo-pet
 swift run
 ```
+> **Note**: To quit the app, look for the small lavender dot in your macOS menu bar!
 
-Quit from the menu bar — look for the small lavender dot.
+### Option B — Download Pre-compiled Binary
 
-### Option B — Download the `.app` from Releases
+1. Grab `MomoPet.app.zip` from the [Latest Release](https://github.com/RagavRida/momo-pet/releases).
+2. Unzip the file and move `MomoPet.app` to your `/Applications` folder.
+3. **First launch**: Right-click `MomoPet.app` → **Open** → click **Open** in the dialog.
+   
+*(macOS displays a warning because the app isn't signed with an Apple Developer ID yet. Right-clicking bypasses this requirement. Official application signing is on the roadmap—see [Support](#-support) if you'd like to help fund that!)*
 
-1. Grab `MomoPet.app.zip` from the
-   [latest release](https://github.com/RagavRida/momo-pet/releases).
-2. Unzip and drop `MomoPet.app` in `/Applications`.
-3. **First launch:** right-click `MomoPet.app` → **Open** → click **Open**
-   in the dialog.
+---
 
-   macOS shows a scary warning because the app isn't signed with an Apple
-   Developer ID yet. Right-click → Open bypasses this safely. You only need
-   to do it once.
+## 💖 Support
 
-   *(Signed builds are on the roadmap — see [Support](#support) below if
-   you'd like to help fund that.)*
-
-## Tech
-
-- Swift + AppKit — transparent, borderless `NSWindow` that floats above
-  every other window
-- SceneKit — 3D scene built from procedural primitives (no `.usdz` /
-  `.scn` assets required)
-
-## Support
-
-Momo is free and open source. If it makes you smile, you can say thanks:
+Momo is free and open-source. If this little pet makes you smile, consider supporting its development:
 
 - **UPI (India):** [![UPI](https://img.shields.io/badge/UPI-ragavrida%40okicici-blue.svg?style=for-the-badge)](upi://pay?pa=ragavrida@okicici)
-- **GitHub Sponsors:** the "Sponsor" button at the top of this repo
+- **GitHub Sponsors:** Click the **"Sponsor"** button at the top of this repository!
 
-Funding goal: ₹8,500 to cover an Apple Developer account so everyone gets
-a signed, one-click-install build.
+**💸 Current Funding Goal:** ₹8,500 to cover an Apple Developer account, allowing for a signed, one-click-install build without macOS security warnings.
 
-## Contributing
+---
 
-Issues and PRs welcome. Good first contributions:
+## 🤝 Contributing
 
-- New idle animations or reactions
-- Extra pet skins / color variants
-- Sound effects (opt-in)
-- Multi-monitor polish
+Issues and Pull Requests are incredibly welcome. If you want to contribute, here are some great first issues:
 
-Please open an issue before large changes so we can align on direction.
+- ✨ New idle animations or reactions
+- 🎨 Extra pet skins and color variants
+- 🔊 Sound effects (opt-in via menu)
+- 🖥 Multi-monitor boundary polish
 
-## License
+> **Pro Tip:** Please open an issue before making large architectural changes so we can align on direction!
 
-MIT — see [LICENSE](LICENSE).
+---
+
+## 📜 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
+
+---
+<div align="center">
+Made with ❤️ by RagavRida
+</div>
